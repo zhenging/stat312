@@ -1,6 +1,6 @@
-### 05 Data Collection
+## 05 Data Collection
 
-**Data**
+### Data
 1\. Numberical
 + Continuous
 + Discrete
@@ -26,3 +26,31 @@ two possibilities.
 The main decision of whether to conside data as ordinal or continuous is guided by two criteria:
 (1) whether or not the mean is an informative statistic
 (2) how many categories there are if you use an ordinal value.
+
+### Essential Ideas
+
+#### Concepts
++ Population
++ Sample
++ Bias
++ Simple Random Sample
++ Explanatory variable
++ Response variable
++ Observational study
++ Experiment
++ Placebo
++ Randomized experiment
++ Control Group
++ Experimental grou
++ Blind study (and double-blind study)
++ Placebo effect
+
+#### Facts
+1. A random sample is not necessarily representative, but usuually is.
+2. We can never know if our sample is representative unless we have a censur of the entire population, in which case a sample is unnecessary.
+3. Principles of experimental designs.
+  + Controlling
+  + Randomization
+  + Replication
+  + Blocking
+4. Association does not impley causation

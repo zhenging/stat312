@@ -26,3 +26,16 @@ $$
 P\{ X \le Q_p\} = p
 \end{aligned}
 $$
+
+#### Mean, Standard Deviation
+For quantiative data that are roughtly symmetric and "mound-shaped", the most common way to summarize the data is by giving the mean and the standard deviation. However, if the data is skewed or has Outliers, it is more common to use the 5 number summary, discussed below.
+
+#### 5 Number Summary
++ Minimum value
++ First Quartile
++ Median
++ Third Quartile
++ Maximum value
+
+#### Outliers
+Outliers are data points which are far away from the rest of the data. There are several methods for computing outlia
