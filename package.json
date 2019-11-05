@@ -1,0 +1,14 @@
+{
+  "name": "stat312",
+  "version": "1.0.0",
+  "description": "Notes of Stat 312",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "course-x-build",
+    "deploy": "course-x-deploy",
+    "debug": "node --inspect-brk $(npm bin)/course-x-build"
+  },
+  "author": "zzheng07",
+  "license": "ISC"
+}

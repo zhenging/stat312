@@ -1,7 +1,7 @@
 ### Central Limit Theorem For Sample Means
 Suppose $X$ is a random variable with a distribution that may be known or unknow (it can be any distribution). Using a subscript that matches the random variable, suppose:
-a. $\mu_X = $ the mean of $X$
-b. $\sigma_X = $ the standard deviation of $X$.
+a. $\mu_X =$ the mean of $X$
+b. $\sigma_X=$ the standard deviation of $X$.
 
 If you draw random sample of sizes $n$, then as $n$ increase, the random variable $\bar {X}$ which consist of sample means, tends to be **normally distributed** and
 $\bar{X} \text{\textasciitilde} N(\mu_x, \displaystyle\frac{\sigma_X}{\sqrt{n}})$
