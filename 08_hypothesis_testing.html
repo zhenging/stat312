@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-reactroot=""><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><head><title>08 Hypothesis Testing</title><link rel="stylesheet" href="/stat312/assets/katex.min_0.9.0.css"/><link rel="stylesheet" href="/stat312/assets/github-markdown_2.10.0.css"/><link rel="stylesheet" href="/stat312/assets/combined.css"/></head><body><header class="header"></header><main class="container"><div class="note-content"><article class="markdown-body"><h3>08 Hypothesis</h3>
+<p><strong>Purpose</strong><br />
+The purpose of a hypothesistst is to decide which of two mutally exclusive and spanning staments is supported by a given data set.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is called the null hypothesis. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">H_A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is called the alternative hypothesis.</p>
+<p>Different types of hypothesis tests<br />
+1. HTs on population parameters</p>
+<ul>
+<li>population proportion</li>
+<li>population mean</li>
+<li>difference in two population means</li>
+</ul>
+<p>2. HT on independence of RVs</p>
+<p>3. Goodness-of-Fit HT for categorical data</p>
+<p>To perform a hypothesis test, a statistician will</p>
+<ol>
+<li>Set up two contradictory hypotheses.</li>
+<li>Collect sample data</li>
+<li>Determine the correct distribution to perform <strong>HT</strong>.</li>
+<li>Analyze sample data by performing the calculations that ultimately will allow to reject or decline to reject the null hypothesis.</li>
+<li>Make a decision and write a meaningful conclusion.</li>
+</ol>
+<h4>Null and Alternative Hypothesis</h4>
+<table>
+<thead>
+<tr>
+<th>ACTION</th>
+<th><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> IS ACTUALLY</th>
+<th>...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>True</td>
+<td>False</td>
+<td></td>
+</tr>
+<tr>
+<td>Do not reject <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></td>
+<td>Correct Outcome</td>
+<td>Type II error</td>
+</tr>
+<tr>
+<td>Reject <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></td>
+<td>Type I Error</td>
+<td>Correct Outcome</td>
+</tr>
+</tbody>
+</table>
+<h5>Example</h5>
+<p>Suppose the null hypothesis, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, is: Frank's rock climbing equipment is safe.</p>
+<p><strong>Type I error:</strong> Frank thinks that his rock climbing equipment may not be safe when, in fact, it really is safe.<br />
+<strong>Type II error:</strong> Frank thinks that his rock climbing equipment may be safe when, in fact, it is not safe.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span></span></span></span> = probability that Frank thinks his rock climbing equipment may not be safe when, in fact, it really is safe.<br />
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span></span></span></span> = probability that Frank thinks his rock climbing equipment may be safe when, in fact, it is not safe.</p>
+<p>Notice that, in this case, the error with the greater consequence is the Type II error. (If Frank thinks his rock climbing equipment is safe, he will go ahead and use it.)</p>
+</article></div></main><footer class="note-footer"><div><p>Content written with attitude by @raven. <a href="../">Contact me</a><br />
+Page built with <a href="https://github.com/markdown-it/markdown-it">markdown-it</a>, <a href="https://khan.github.io/KaTeX/">Katex</a>, <a href="https://reactjs.org/">React</a> and <a href="https://webpack.js.org/">webpack</a>.<br />
+Updated at Nov 5, 2019 10:17 PM</p>
+</div></footer></body></html>
