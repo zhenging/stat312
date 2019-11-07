@@ -10,7 +10,7 @@ Different types of hypothesis tests
 + population mean
 + difference in two population means
 
-2\. HT on independence of RVs
+2\. HT on independence of RVsgi
 
 3\. Goodness-of-Fit HT for categorical data
 
