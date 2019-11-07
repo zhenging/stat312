@@ -25,6 +25,7 @@ Let $C$ be the count of voters who says yes out of the 500 in the sample, and  a
 $C \text{\textasciitilde} \text{Binomial(500, 0.6)}$, $E[C] = n * \pi = 500 \times 0.6 = 300$
 
 **Graph**
+![HT on population proportion](/assets/ht_on_population_proportion.jpg)
 
 **Calculate p-value**
 $$
@@ -47,3 +48,5 @@ This data (327 out of 500) provides very strong evidence that more than 60% of r
 
 **Notes**
 The size of the p-value determins the strength of the evidence.
+
+![p-value](/assets/p-value.jpg)
