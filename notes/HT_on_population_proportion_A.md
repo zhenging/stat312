@@ -4,10 +4,8 @@
 Registered voter in Phoenix. 327 out of 500 support use of oxygenated fuel year-around to reduce air pollution. Do more than 60% of registered voters in Phoenix support it?
 
 **Research Question**: Do registered voters in Phoenix support use of oxygenated fuel year around to reduct air population?
-
-**Population of Interest**: Registered voters in Phoenix
-
-**Quantity of Interest**: Proportion who support oxygenated fules.
+  + **Population of Interest**: Registered voters in Phoenix
+  + **Quantity of Interest**: Proportion who support oxygenated fules.
 
 **Perspective**: We take the perspective of an environmentalist who want to shout to the world that more than 60% of voters support oxygenated fules.
 Let $\pi$ be the tru population of voters who support the year-around use of oxygenated fuels to reduce air pollution.
@@ -16,7 +14,9 @@ Let $\pi$ be the tru population of voters who support the year-around use of oxy
 Record $X_j = \begin{cases} 1 \text{ if voters support}\\ 0 \text{ otherwise}\end{cases}$, where $j=1, 2, \dots, 500$
 Sample size: $n=500$
 
-**State $H_0 \& H_A$:** $H_0: \pi \le 0.60$, and $H_A: \pi \gt 0.60$
+**State $H_0 \& H_A$:**
+$H_0: \pi \le 0.60$
+$H_A: \pi \gt 0.60$
 
 **Choose $\alpha$**: Use standard value of $\alpha = 0.05$
 
@@ -33,7 +33,7 @@ $$
 \text{p-value} &= P(\text{get our value or more extreme } | H_0 \text{is true})\\
 &= P(C \ge 327 | H_0 \text{is true})\\
 &= 1 - P(C < 326) \text{ one less than observed because of RV}\\
-&= 1 - \text{binomialcdf}(500, 0.06, 326)\\
+&= 1 - \text{binomcdf}(500, 0.06, 326) \qquad \text{(Ti 83)}\\
 &= 1 - 0.99258\\
 &= 0.00742
 \end{aligned}
