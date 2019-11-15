@@ -24,3 +24,5 @@ t_0 &= \frac{\bar{x} - \mu_0}{s/\sqrt{n}}\\
 &= 4.227
 \end{aligned}
 $$
+
+The data set (size of 50) with $s=0.8$ has the power of $0.739$ to detect $\mu$ of $4.3$ versus $4.0$.
