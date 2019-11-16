@@ -1,4 +1,8 @@
+# TODO
 ## Hypothesis Test on Independence
+
+> Credit: Dr. A
+
 
 ### Example G
 In a study a hypertension and smoking habits, participants were categorized as non-smokers, moderate smokers, or heavy smokers and tests were run to decide if they have hypertension or not? The data is summmarized below. Are the variables independent?
@@ -10,7 +14,7 @@ In a study a hypertension and smoking habits, participants were categorized as n
 
 #### Research Question
 Is hypertension independent of smoking status?
-> Remember: $P(A \cup) B = P(A) * P(B)$
+> Remember: $P(A \cap B) = P(A) * P(B)$
 
 + **Population of Interest**: We are not told any information about these participants so we can not justify a particular population.
 

@@ -1,5 +1,7 @@
 ## Hypothesis Test on Population Proportion ($\pi$)
 
+> Credit: Dr. A
+
 ### Example B
 Semiconductor manufacturer produces controllers used in automobile engine applications. A customer requires that the fraction of defective controllers not exceed `0.03` and that the manufacturer demonstrates process capability at this level of quality using $\alpha = 0.05$. The semiconductor manufacturer takes a random sample of `200` devices and finds via testing that `4` of them are defective. Can the manufacturer demonstrate process capability for the customer?
 
@@ -38,13 +40,15 @@ Small values of $C$ are surprising if $H_0$ is true
 $\therefore$ p-value is left tail.
 
 #### Calculate `p-value`
+> [Ti 83 tips](//todo)
+
 $$
 \begin{aligned}
-\text{p-value} &= P(\text{get our value or more extreme } \space | \space H_0 \text{is true})\\
+\text{p-value} &= P\{\text{get our value or more extreme } | \space H_0 \text{ is true}\}\\
 &= P(C \le 4 \space | \space H_0 \text{ is true})\\
 &= \text{binomcdf}(n, \pi, \text{observed})\\
 &= \text{binomcdf}(200, 0.03, 4) \qquad \text{(Ti 83)}\\
-&= 0.280979
+&\approx 0.2810
 \end{aligned}
 $$
 
@@ -86,15 +90,15 @@ p-value: 0.28098
 ```
 
 #### Draw Conclusion
-$\text{p-value} \approx 0.280979 > 0.05 = \alpha$
+$\text{p-value} \approx 0.2810 > 0.05 = \alpha$
 $\therefore$ **Fail** to Reject $H_0$.
 
 #### State conclusion in context
 The sample data (`4` defective out of `200`) **does not provide** strong evidence that the manufacturer has the process quality that the custome requires.
 
 > **Note**
-1\. The sample proportion of defective controllers is `0.02` which is less than the desired `0.03` quality level. However, if the true population proportion is $0.03$, it would not be too surprising to see `4` or fewer defectives in $200$.
-2\. If we flipped `200` coins, each w/P(heads) $=3$, we would see 4 or fewer 4 heads in about `28%` of the replications.
+1\. The sample proportion of defective controllers is `0.02` which is less than the desired `0.03` quality level. However, if the true population proportion is `0.03`, it would not be too surprising to see `4` or fewer defectives in `200`.
+2\. If we flipped `200` coins, each `w/P(heads) =3`, we would see 4 or fewer 4 heads in about `28%` of the replications.
 
 | x | 0 | 1 | 2 |
 |----|---|---|---|---|

@@ -6,3 +6,63 @@ There are 9 people selected (n = number of trials = 9). The probability of succe
 ```
 binomcdf(9, 0.62, 6)
 ```
+
+#### Student T Distribution
+```
+tcdf(lower bound, upper bound, degree of freedom)
+```
+
+#### Inverse T
+[Programming invT into a Ti 83 or Ti 83+ Calculator](https://www.youtube.com/watch?v=5Ft5eZVJtPk)
+
+```
+PROGRAMM: INVT
+:INPUT "AREA LEFT:", A
+:INPUT "DF:", D
+:1->S
+:If A<0.5
+:Then
+:-1->S
+:End
+:abs(2*A - 1)->A
+:TInterval 0, sqrt(D+1), (D+1), A
+:Disp upper*S
+:
+```
+
+#### tcdf
+```
+PROGRAMM: TCDF
+INPUT "LOWER", L
+INPUT "UPPER", U
+INPUT "DF", D
+tcdf(L, U, D)
+DISP ANS
+```
+
+#### T-score of Single Population
+```
+PROGRAMM: TSCORE1
+INPUT "SAMPLE MEAN", X
+INPUT "POPULATION MEAN", U
+INPUT "SAMPLE SIZE", N
+INPUT "SAMPLE SD", S
+(X-U)/(S/sqrt(N))
+DISP ANS
+```
+> Replace `sqrt` with squre root key on Ti 83 calculator
+
+#### T-score of Two Populations
+```
+PROGRAMM: TSCORE2
+INPUT "SAMPLE MEAN 1", X1
+INPUT "SAMPLE MEAN 2", X2
+INPUT "MEAN DIFF",
+INPUT "SAMPLE SD 1", S1
+INPUT "SAMPLE SD 2", S2
+
+INPUT "SAMPLE SD", S
+(X-U)/(S/sqrt(N))
+DISP ANS
+```
+> Replace `sqrt` with squre root key on Ti 83 calculator

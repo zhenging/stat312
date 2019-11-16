@@ -1,5 +1,7 @@
 ## Hypothesis Test on the Difference between Twp Population Means
 
+> Credit: Dr. A
+
 ### Example F
 A paper in Quality Engineering [2013, v25(1)] presented data on cycles to failure of solder joints at different temperatures for printed circuit boards. Failure data for two temperatures for a copper-nickel-gold printed circuit board is summarized.
 $20^{\degree} C: \bar{x_1} = 422.2; \space s_1 = 172.23; \space n_1 = 10$
@@ -55,7 +57,7 @@ $$
 T_0 &= \frac{(\bar{X_1} - \bar{X_2}) - \Delta_0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\\
 &= 0.62204\\
 T_0 &\text{\textasciitilde} t_v\\
-v &= \lfloor \frac{(r_1^2 + r_2^2)}{\frac{r_1^2}{n_1 - 1} + \frac{r_2^2}{n_2 - 1}} \rfloor, \space r_j = \frac{s_j^2}{n_j}, \space j\in \{1, 2\}\\
+v &= \bigg\lfloor \frac{(r_1^2 + r_2^2)}{\frac{r_1^2}{n_1 - 1} + \frac{r_2^2}{n_2 - 1}} \bigg\rfloor, \space r_j = \frac{s_j^2}{n_j}, \space j\in \{1, 2\}\\
 \implies &v = \lfloor 17.93 \rfloor = 17\\
 T_0 &\text{\textasciitilde} t_{17}
 \end{aligned}
@@ -68,11 +70,13 @@ Be careful calculating $v$. It should be close to $n_1 + n_2$.
 ![Two sample t test](/assets/two_sample_t_test_two_sides.png)
 
 #### Calculate `p-value`
+> [Ti 83 tips](//todo)
+
 $$
 \begin{aligned}
 \text{p-value} &= P\{\text{get what we got or somthing more extreme} \space | \space H_0 \text{ is true}\}\\
-&= 2 * P\{t_{17} < -46.5\ | \mu_1 - \mu_2 = 0\} \quad \text{b/c t17 is symmetric}\\
-&= 2 * \text{tcdf}(\underbrace{-99}_{\text{lower boundary}}, \overbrace{-0.622}^{\text{upper boundary}}, \underbrace{17}_{\text{degree of freedom}}) \qquad \text{(Ti 83)}\\
+&= 2 * P\{t_{17} < -46.5\ | \mu_1 - \mu_2 = 0\} \quad \color{magenta}\text{(b/c t17 is symmetric)}\\
+&= 2 * \text{tcdf}(\underbrace{-99}_{\text{lower bound}}, \overbrace{-0.622}^{\text{upper bound}}, \underbrace{17}_{\text{degree of freedom}}) \qquad \text{(Ti 83)}\\
 &= 2 * 0.2710973\\
 &= 0.54219
 \end{aligned}

@@ -1,5 +1,7 @@
 ## Hypothesis Test on Population Proportion ($\pi$)
 
+> Credit: Dr. A
+
 ### Example A
 Registered voter in Phoenix. `327` out of `500` support use of oxygenated fuel year-around to reduce air pollution. Do more than `60%` of registered voters in Phoenix support it?
 
@@ -34,6 +36,8 @@ $E[C] = n * \pi = 500 \times 0.6 = 300$
 > Observed `327` yeses. More yeses is surprising if $H_0$ is true.
 
 #### Calculate `p-value`
+> [Ti 83 tips](//todo)
+
 $$
 \begin{aligned}
 \text{p-value} &= P\{\text{get our value or more extreme } \space | \space H_0 \text{ is true}\}\\
