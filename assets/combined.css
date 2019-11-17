@@ -109,14 +109,19 @@ table {
   }
   .markdown-body {
     font-size: 1em;
+    line-height: 1.25;
   }
   .markdown-body h3 {
     background-color: white;
     color: black;
     margin-bottom: 2px;
   }
+  .markdown-body h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   .markdown-body img {
-    max-width: 160px;
+    max-width: 300px;
   }
   .markdown-body p {
     margin-bottom: 5px;
