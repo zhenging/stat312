@@ -16,10 +16,10 @@ Let $\mu$ be the population mean energy usage (annual) by this vacuum cleaner of
 
 #### Data Collection
 The data is already collected. We assume that a simple random sample was used.
-Sample size: $n = 12$
+Sample size: `n = 12`
 Sample mean: $\bar x = 42$ kw
-Sample standard deviation: $s = 5.7$ kw
-Let $X_j$ be annual energy usage of `jth` vacuum cleaner, where $j=1, 2, \cdots, 12$
+Sample standard deviation: `s = 5.7` kw
+Let $X_j$ be annual energy usage of `jth` vacuum cleaner, where `j=1, 2,... 12
 
 #### State $H_0 \& H_A$
 $H_0: \mu = 46$
@@ -31,7 +31,7 @@ This is a two-sided HT, which means that sample means that are very large and on
 Use the standard value of $\alpha = 0.05$
 
 #### Define test statistic & distribution
-Since we only have summary data, we will assume that the following is true about our sample data
+**Assumptions**
 1. A simple random sample was used.
 2. Data is from a normally distributed population.
   a. Since `n` is small, this is important.
@@ -43,7 +43,7 @@ Since we only have summary data, we will assume that the following is true about
 $$
 \begin{aligned}
 &\bar{x} = 42, s = 5.7, n = 12, \mu_0 = 46\\
-&T_0 = \frac{\bar x - \mu_0}{s/\sqrt n}\\
+&T_0 = \frac{\bar x - \mu_0}{s/\sqrt n} \\
 &T_0 \text{\textasciitilde} t_{n-1}\\
 &t_{n-1} = t_{12-1} = t_{11}\\
 &t_0 = \frac{42- 46}{5.7/\sqrt{12}} = -2.4309

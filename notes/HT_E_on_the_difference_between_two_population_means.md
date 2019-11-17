@@ -18,14 +18,14 @@ Population mean impact strength
 #### Perspective
 Population mean impact strength from supplier 2 is at least 20 ft-lbs higher than that of supplier 1.
 We are looking for strong evidence that supplier 2 gears are 20 ft-lbs better. Perhaps our current supplier is 1 and we decided that an improvement of 20 ft-lbs would be worth the cost of chaing suppliers.
-Let $\mu_j$ be true population mean impact strength of gears from supplier `j`, $j \in \{1, 2\}$
+Let $\mu_j$ be true population mean impact strength of gears from supplier `j`, and  `j = 1, 2`.
 
 #### Data Collection
-The data is already collected.
-+ We assume that a simple random sample was used.
-+ We assume that the data sets are independent, because they are different manufacturers.
-Sample size: $n_1 = 10, \space n_2 = 16$
+**Assumptions**
++ A simple random sample was used.
++ The data sets are independent, because they are different manufacturers.
 
+Sample size: $n_1 = 10, \space n_2 = 16$
 
 #### State $H_0 \& H_A$
 $H_0: \mu_2 - \mu_1 \le 20$
@@ -41,7 +41,7 @@ We denote `-20` with $\Delta_0$.
 Use the **given** value of $\alpha = 0.01$
 
 #### Define test statistic & distribution
-Assumptions:
+**Assumptions:**
 1. Simple random sample for each population
 2. The two samples are independent.
 3. Each data set is normally distributed.
@@ -55,9 +55,9 @@ $$
 &\bar{x_1} = 290; \space s_1 = 12; \space n_1 = 10\\
 &\bar{x_2} = 321; \space s_1 = 22; \space n_2 = 16\\
 &\Delta_0 = -20\\
-T_0 &= \frac{(\bar{X_1} - \bar{X_2}) - \Delta_0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\\
+T_0 &= \frac{(\bar{X_1} - \bar{X_2}) - \Delta_0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \text{ and } T_0 \text{\textasciitilde} t_v\\
+t^* &= \frac{(290 - 321) - (-20)}{\sqrt{\frac{12^2}{10} + \frac{22^2}{16}}}\\
 &= -1.6462\\
-T_0 &\text{\textasciitilde} t_v\\
 v &= \bigg\lfloor \frac{(r_1^2 + r_2^2)}{\frac{r_1^2}{n_1 - 1} + \frac{r_2^2}{n_2 - 1}} \bigg\rfloor, \space r_j = \frac{s_j^2}{n_j}, \space j\in \{1, 2\} \qquad \color{magenta}{\text{(The ugly formula)}}\\
 \implies &v = \lfloor 23.721 \rfloor = 23 \qquad \text{Floor function: round to integer}\\
 T_0 &\text{\textasciitilde} t_{23}
@@ -76,7 +76,8 @@ Be careful calculating $v$. It should be close to $n_1 + n_2$.
 $$
 \begin{aligned}
 \text{p-value} &= P\{\text{get what we got or somthing more extreme} \space | \space H_0 \text{ is true}\}\\
-&= P\{T_0 < -1.6462\ \space | \space T_0 \text{\textasciitilde} t_{23} \text{ and } \mu_1 - \mu_2 = -20\} \\
+&= P\{T_0 < t^*\ \space | \space T_0 \text{\textasciitilde} t_{23} \text{ and } \mu_1 - \mu_2 = -20\} \\
+&= \text{tcdf}(\text{Lower bound}, \text{Upper bound}, \text{Degree of freedom}) \qquad \text{(Ti 83)}\\
 &= \text{tcdf}(-99, -1.6462, 23) \qquad \text{(Ti 83)}\\
 &= 0.05666
 \end{aligned}
@@ -124,7 +125,7 @@ diff:-31
 Null hypothesis       : mu1-mu2 = -20
 Alternative hypothesis: mu1-mu2 < -20
 t-statistic: -1.646
-df: 23.72
+df: 23.72-1.6462
 99 % Confidence interval for mu1-mu2: ( -49.70815 ,  -12.29185 )
 p-value: 0.05646
 ```
@@ -135,3 +136,7 @@ $\therefore$ **Fail** to reject $H_0$.
 
 #### State conclusion in context
 This data **does not** support the claim that the mean impact strength of gear from supplier 2 is at least 20 ft-lbs high than that of supplier 1. We do not recommand changing from supplier 1 to supplier 2.
+
+#### Questions
+1. Why $\sigma_1^2 \ne \sigma_2^2$, since  $s_1^2 \ne s_2^2$, we can **not** assume that $\sigma_1^2 = \sigma_2^2$
+2. How do we calculate confidence interval of `2 sample t test`?

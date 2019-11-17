@@ -58,7 +58,8 @@ $$
 ##### Using Base R
 ```
 binom.test(x = 327, n = 500, p = 0.03,
-    alternative = "less", conf.level = 0.95)
+          alternative = "less",
+          conf.level = 0.95)
 
 **********************************Output***************************************
 Exact binomial test
@@ -76,7 +77,8 @@ probability of success
 ##### Using ISCAM function
 ```
 iscambinomtest(observed = 4, n = 200, hypothesized = 0.03,
-    alternative = "less", conf.level = 0.95)
+              alternative = "less",
+              conf.level = 0.95)
 
 **********************************Output***************************************
 Exact Binomial Test
@@ -105,3 +107,7 @@ The sample data (`4` defective out of `200`) **does not provide** strong evidenc
 $P(C\le x)$ | 0.002266 | 0.0165 | 0.05929
 
 If we observed `0` or `1` defective controller, we would have strong evidence to reject $H_0$.
+
+#### Questions
+1. Difference of notations: $\pi$, $\pi_0$, $\hat p$, $p$, $p_0$
+2. Discrepancy of `binom.test` and `iscambinomtest` confidence interval?

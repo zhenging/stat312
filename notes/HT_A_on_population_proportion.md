@@ -55,7 +55,9 @@ $$
 ##### Using Base R
 ```
 binom.test(x = 327, n = 500, p = 0.60,
-    alternative = "greater", conf.level = 0.95)
+          alternative = "greater",
+          conf.level = 0.95)
+
 **********************************Output***************************************
 Exact binomial test
 
@@ -72,7 +74,8 @@ probability of success
 ##### Using ISCAM function
 ```
 iscambinomtest(observed = 327, n = 500, hypothesized = 0.60,
-    alternative = "greater", conf.level = 0.95)
+              alternative = "greater",
+              conf.level = 0.95)
 
 **********************************Output***************************************
 Exact Binomial Test
@@ -87,7 +90,7 @@ p-value: 0.0074202
 
 #### Draw Conclusion
 $\text{p-value} = 0.00742 < 0.05 = \alpha$
-$\therefore$ Reject $H_0$ in favor of $H_A$.
+$\therefore$ **Reject** $H_0$ in favor of $H_A$.
 
 #### State conclusion in context
 This data (`327` out of `500`) **provides very strong evidence** that more than `60%` of registered voters in Phoenix support the use of oxygenated fuels year-around to reduce air pollution.
@@ -95,3 +98,6 @@ This data (`327` out of `500`) **provides very strong evidence** that more than 
 > **Note**
 The size of the `p-value` determines the strength of the evidence.
 ![p-value](/assets/p_value_interpretation.png)
+
+#### Questions
+1. How to calculate Confidence Interval in the binominal test? Is is `1-PropZInterval`? Why the discrepancy between the results of `binom.test` and `iscambinomtest`?

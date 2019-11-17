@@ -27,7 +27,7 @@ We are not given any information about how the data was collected. We must **ass
 > **Note**
 Always state the assumption if you don't know how the data was collected.
 Sample size: $n = 37$
-Let $X_j$ be self reported height (inches) of the `jth` student $j=1, 2, \cdots, 12$
+Let $X_j$ be self reported height (inches) of the `jth` student `j=1, 2, ... 12`
 
 #### State $H_0 \& H_A$
 $H_0: \mu \le 65$
@@ -40,10 +40,10 @@ If you want to claim **at least** something, equal sign must be in $H_0$.
 Use the standard value of $\alpha = 0.05$
 
 #### Define test statistic & distribution
-Since we only have summary data, we will assume that the following is true about our sample data
+**Assumptions**
 1. A simple random sample was used.
 2. Data is from a normally distributed population. (**test is NOT very sensitive to this assumption, but check waht you can.** For this data, sample mean $\approx$ sample median, so it is not severely skewed.)
-3. $\sigma^2 \approx s^2$. (**Large sample sizes support this**, `n=37`, so this is OK)
+3. $\sigma^2 \approx s^2$. (**Large sample sizes support this**, `n = 37`, so this is OK)
 
 $$
 \begin{aligned}
@@ -116,3 +116,8 @@ $\therefore$ **Fail** to Reject $H_0$
 
 #### State conclusion in context
 This data **does not** provide any evidence that the population mean height of college students is over 65 inches.
+
+#### Questions
+1. Why does $\sigma^2 \approx s^2$ matter?
+2. Notation: $T_0, t_0, t^*, t_{n-1}$, $\mu, \mu_0$, `t-statistic`, `t-score`, `t critical value`
+3. Discrepancy between `iscamonesamplet` and `tsum.test` in confidence interval. `iscamonesamplet` and Ti 83+ have the same result.

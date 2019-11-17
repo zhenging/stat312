@@ -52,11 +52,11 @@ Assumptions:
 $$
 \begin{aligned}
 &\bar{x_1} = 422.2; \space s_1 = 172.23; \space n_1 = 10\\
-&\bar{x_2} = 375.7; \space s_1 = 161.92; \space n_2 = 10\\
+&\bar{x_2} = 375.7; \space s_2 = 161.92; \space n_2 = 10\\
 &\Delta_0 = 0\\
-T_0 &= \frac{(\bar{X_1} - \bar{X_2}) - \Delta_0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\\
+T_0 &= \frac{(\bar{X_1} - \bar{X_2}) - \Delta_0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \text{ and } T_0 \text{\textasciitilde} t_v\\
+t^* &= \frac{(422.2 - 375.7) - 0}{\sqrt{\frac{172.23^2}{10} + \frac{161.92^2}{10}}}\\
 &= 0.62204\\
-T_0 &\text{\textasciitilde} t_v\\
 v &= \bigg\lfloor \frac{(r_1^2 + r_2^2)}{\frac{r_1^2}{n_1 - 1} + \frac{r_2^2}{n_2 - 1}} \bigg\rfloor, \space r_j = \frac{s_j^2}{n_j}, \space j\in \{1, 2\}\\
 \implies &v = \lfloor 17.93 \rfloor = 17\\
 T_0 &\text{\textasciitilde} t_{17}
@@ -136,3 +136,7 @@ $\therefore$ **Fail** to reject $H_0$.
 
 #### State conclusion in context
 This data **does not** provide evidence that the mean number of cycles until failures is different for solder joints made at $20^{\degree}$ C versus $60^{\degree}$ C.
+
+#### Questions
+1. $P\{t_{17} < -46.5\ | \mu_1 - \mu_2 = 0\}$, why not $P\{T_{17} < t^*\ | \mu_1 - \mu_2 = 0\}$
+2. `iscamtwosamplet` and `tsum.test` produce the sample confidence interval.

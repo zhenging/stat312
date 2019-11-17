@@ -1,8 +1,6 @@
-# TODO
 ## Hypothesis Test on Independence
 
 > Credit: Dr. A
-
 
 ### Example G
 In a study a hypertension and smoking habits, participants were categorized as non-smokers, moderate smokers, or heavy smokers and tests were run to decide if they have hypertension or not? The data is summmarized below. Are the variables independent?
@@ -29,8 +27,8 @@ We do assume a random sample for this HT. Data is collected for each observation
 Sample size: $n = 180$
 
 #### State $H_0 \& H_A$
-$H_0$: Smoking status and hypertension are independent.
-$H_A$: Smoking status and hypertension are **Not** independent.
+$H_0$: Smoking status and hypertension **are** independent.
+$H_A$: Smoking status and hypertension **are Not** independent.
 
 #### Choose $\alpha$
 Use the standard value of $\alpha = 0.05$
@@ -76,7 +74,7 @@ $$
 \begin{aligned}
 \Chi_0^2 &\text{\textasciitilde} \Chi_v^2\\
 v &= (\text{No. of rows} - 1)* (\text{No. of columns} - 1)\\
-&= 1 + 2 = 3\\
+&= 1 * 2 = 2\\
 \Chi_0^2  &= \Sigma_i \Sigma_j \frac{(O{ij-E_{ij}})^2}{E_{ij}}\\
 &= \frac{(21 - 33.350)^2}{33.350} + \frac{(36 - 29.967)^2}{29.967} + \frac{(30 - 23.683)^2}{23.683}\\
 &+ \frac{(48 - 35.650)^2}{35.650} + \frac{(26 - 32.033)^2}{32.033} + \frac{(19 - 25.316)^2}{25.316}\\
@@ -85,6 +83,7 @@ v &= (\text{No. of rows} - 1)* (\text{No. of columns} - 1)\\
 $$
 
 #### Graph
+![Chi-squared Test on Independence](/assets/chisq_test_independence_example.png)
 
 #### Calculate `p-value`
 $$
@@ -95,6 +94,52 @@ $$
 &\approx 0.0007233
 \end{aligned}
 $$
+
+#### Calculate `p-value` in `R`
+> [Chi-squared Test Documentation](https://www.rdocumentation.org/packages/stats/versions/3.6.1/topics/chisq.test)
+
+##### Using Base R
+```
+elementary = c(14, 37, 32)
+secondary = c(19, 42, 17)
+college = c(12, 17, 10)
+M = as.table(rbind(elementary, secondary, college))
+dimnames(M) = list("Education" = c("Elementary", "Secondary", "College"),
+  "Number of Children" = c("0-1", "2-3", "Over 3"))
+
+Xsq = chisq.test(M)
+print("Observed Counts")
+Xsq$observed
+print("Expected Counts")
+Xsq$expected
+Xsq
+
+**********************************Output***************************************
+[1] "Observed Counts"
+                   Smoker Status
+Hypertension status Non Moderate Heavy
+                Yes  21       36    30
+                No   48       26    19
+[1] "Expected Counts"
+                   Smoker Status
+Hypertension status   Non Moderate    Heavy
+                Yes 33.35 29.96667 23.68333
+                No  35.65 32.03333 25.31667
+
+	Pearson's Chi-squared test
+
+data:  M
+X-squared = 14.464, df = 2, p-value = 0.0007232
+```
+
+##### Using ISCAM function
+```
+iscamchisqprob(xval = Xsq$statistic, df = 3)
+
+**********************************Output***************************************
+probability: 0.0007232
+Graph
+```
 
 #### Draw Conclusion
 $\text{p-value} = 0.0007233 < 0.05 = \alpha$
