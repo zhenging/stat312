@@ -66,13 +66,20 @@ table {
   color: #b03f3b;
 }
 
+.markdown-body h4 {
+  background-color: #38a14e;
+  display: inline-block;
+  padding: 0.5em;
+  color: white;
+}
+
 .markdown-body blockquote {
   padding: 1em 1em;
   border: 0.5em solid #dfe2e5;
 }
 
 .markdown-body strong {
-  color: #00609A;
+  color: #723389;
   border-bottom: 1px dotted #0081bc;
 }
 
