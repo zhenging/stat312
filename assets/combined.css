@@ -111,14 +111,18 @@ table {
     font-size: 1em;
     line-height: 1.25;
   }
+  .markdown-body blockquote {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
   .markdown-body h3 {
     background-color: white;
     color: black;
     margin-bottom: 2px;
   }
   .markdown-body h4 {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
   }
   .markdown-body img {
     max-width: 300px;
