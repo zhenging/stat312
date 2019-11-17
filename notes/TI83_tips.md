@@ -66,3 +66,21 @@ INPUT "SAMPLE SD", S
 DISP ANS
 ```
 > Replace `sqrt` with squre root key on Ti 83 calculator
+
+#### Chi-squared
+E.g.
+[21 36 30]
+[48 26 19]
+
+1. Put data into a matrix.
+  + Press `2nd`, `x-1/MATRIX`, select `EDIT` on screen
+  + Select `A`
+  + Specify rows and columns for the matrix `2 x 3`
+  + Input given numbers
+2. Test with Chi-squared Test
+  + Press `STAT`, select `TESTS`
+  + Press `ALPHA`, then press `C` to select $\Chi^2$-Test
+3. Select `Calculate` or `Draw` to see result
+4. To check expected value
+  + Press `2nd`, `x-1/MATRIX`, select `EDIT` on screen
+  + Select `B` to see the result

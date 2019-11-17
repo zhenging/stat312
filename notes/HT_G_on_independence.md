@@ -40,16 +40,13 @@ Interpret the contingency table:
 Let $H$ denote person has hypertension. For a randomly selected person
 $$
 \begin{aligned}
-P(H) = \frac{87}{180}\\
-P(H^C) = \frac{93}{180}\\
+P(H) = \frac{87}{180}, \space P(H^C) = \frac{93}{180}
 \end{aligned}
 $$
 Let $S_0, S_1, S_2$ denote the three smoky statues.
 $$
 \begin{aligned}
-P(S_0) = \frac{69}{180}\\
-P(S_1) = \frac{62}{180}\\
-P(S_2) = \frac{49}{180}
+P(S_0) = \frac{69}{180}, \space P(S_1) = \frac{62}{180}, \space P(S_2) = \frac{49}{180}
 \end{aligned}
 $$
 
@@ -57,16 +54,51 @@ Let $O_{ij}$ be the count of person with hypertension level of $i$ and smoking s
 Assuming $H_0$ is true, we calculate the number of cases we expect to see in each cell of the table.
 $$
 \begin{aligned}
-E_{ij} = n * \frac{}{}
+E_{ij} &= n * (\frac{\text{total count in row i}}{n}) * (\frac{\text{total count in column j}}{n})\\
+&= \frac{\text{(total count in row i)} * \text{(total count in column j)}}{n}
 \end{aligned}
 $$
 
-> **Assume $H_0$ is true**
+Expected Counts:
+|   | Non-smokers | Moderate Smokers | Heavy Smokers |
+|---|-------------|------------------|---------------|
+| Hypertension   | $\frac{87 * 69}{180}=33.350$ | $\frac{87 * 62}{180}=29.967$ |  $\frac{87 * 49}{180} = 23.683$ |
+| No Hypertension | $\frac{93 * 69}{180}=35.650$ | $\frac{93 * 62}{180}=32.033$ | $\frac{93 * 49}{180}=25.317$ |
+
+|   | Non-smokers | Moderate Smokers | Heavy Smokers |
+|---|-------------|------------------|---------------|
+| Hypertension    | 21 | 36 | 30 |
+| No Hypertension | 48 | 26 | 19 |
+
+Test Statistic is $\Chi^2$ (chi-squared)
+
+$$
+\begin{aligned}
+\Chi_0^2 &\text{\textasciitilde} \Chi_v^2\\
+v &= (\text{No. of rows} - 1)* (\text{No. of columns} - 1)\\
+&= 1 + 2 = 3\\
+\Chi_0^2  &= \Sigma_i \Sigma_j \frac{(O{ij-E_{ij}})^2}{E_{ij}}\\
+&= \frac{(21 - 33.350)^2}{33.350} + \frac{(36 - 29.967)^2}{29.967} + \frac{(30 - 23.683)^2}{23.683}\\
+&+ \frac{(48 - 35.650)^2}{35.650} + \frac{(26 - 32.033)^2}{32.033} + \frac{(19 - 25.316)^2}{25.316}\\
+&\approx 14.4634
+\end{aligned}
+$$
 
 #### Graph
 
 #### Calculate `p-value`
+$$
+\begin{aligned}
+\text{p-value} &= P\{\text{get our value or more extreme } \space | \space H_0 \text{ is true}\}\\
+&= P(\Chi_0^2 > 14.4634 \space | \space H_0 \text{ is true})\\
+&= \Chi^2\text{cdf}(14.4634, 999, 2)\\
+&\approx 0.0007233
+\end{aligned}
+$$
 
 #### Draw Conclusion
+$\text{p-value} = 0.0007233 < 0.05 = \alpha$
+$\therefore$ **Reject** $H_0$ in favor of $H_A$.
 
 #### State conclusion in context
+This data **provides strong evidence** that smoking status (non-smoker, moderate, heavy) is **not** independent of having hypertension or not.

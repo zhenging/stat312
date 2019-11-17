@@ -86,7 +86,7 @@ p-value: 0.0074202
 ```
 
 #### Draw Conclusion
-$\text{p-value} \approx 0.00742 < 0.05 = \alpha$
+$\text{p-value} = 0.00742 < 0.05 = \alpha$
 $\therefore$ Reject $H_0$ in favor of $H_A$.
 
 #### State conclusion in context

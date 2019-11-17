@@ -90,7 +90,7 @@ p-value: 0.28098
 ```
 
 #### Draw Conclusion
-$\text{p-value} \approx 0.2810 > 0.05 = \alpha$
+$\text{p-value} = 0.2810 > 0.05 = \alpha$
 $\therefore$ **Fail** to Reject $H_0$.
 
 #### State conclusion in context
