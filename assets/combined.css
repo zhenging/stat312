@@ -114,6 +114,7 @@ table {
   .markdown-body blockquote {
     margin-top: 0px;
     margin-bottom: 0px;
+    padding: 0.5em;
   }
   .markdown-body h3 {
     background-color: white;
