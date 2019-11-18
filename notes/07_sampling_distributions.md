@@ -1,6 +1,6 @@
-### 07  Sampling Distributions
+## 07  Sampling Distributions
 
-#### Data Distribution
+### Data Distribution
 **1\. Numerical Summaries**
 + Point summaries: mean, median, st dev, IQR, etc.
 + Summary intervals: The middle k% of the data is is (left -> right). (**Open Interval**)
@@ -32,7 +32,7 @@ c. Oulliers = Data point characteristic; which skew = distribution characteristi
 
 > QQ plot looks at the fitness of data points on a theoretical distribution familiy, compares the data set and the theoretical distribution, and does a qualitative judgement.
 
-#### Sampling Distributions
+### Sampling Distributions
 1. A sample statistic is a function of the data, e.g. mean, st dev, minimum
 2. A sampling distribution is the probability distribution of a sample statistic.
 
@@ -74,3 +74,33 @@ $$
 \bar{X} \text{\textasciitilde \space approximately } t_{n-1}
 \end{aligned}
 $$
+
+### Notation
+`n` = sample size
+`j` is the subscript that denotes the particular one
+
+**Probability VS. Statistics**
+$X_j$ - Random Variable (For _probability perspective_)
++ Capital Letter
++ With "Feet"
+
+$x_j$ - Data Value (For _statistics perspective_)
+
+For Example:
+Let $X_j$ = height of _jth_ patient in inches, j=1,...,n
+$x_j = 64.5$ inches - measuared value subject to measurement error, recording errod, etc.
+$X_j$ = height of _4th_ patient (**true value**)
+
+**Population VS. Sample**
+
+| Concept | Population Parameter | Sample Statistic |
+|---------|----------------------|------------------|
+| mean | $\mu$ | $\bar{x}$ |
+| standard deviation | $\sigma$ | $s$ |
+| variance | $\sigma^2$ | $s^2$ |
+| proportion | $\pi$ | $p$ |
+
++ The **True value** fo the population parameter is unknown (unless we do a census - collect data from every memeber of the population - in which case, we don't really need to estimate anything).
++ We estimate the value of the population parameter by the sample statistic.
++ Estimate are denoted with "hats", eg. $\hat \mu = \bar{x}$.
++ Seeing $\pi$ as a parameter instead of a number.
