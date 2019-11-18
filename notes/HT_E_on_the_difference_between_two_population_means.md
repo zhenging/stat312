@@ -140,3 +140,4 @@ This data **does not** support the claim that the mean impact strength of gear f
 #### Questions
 1. Why $\sigma_1^2 \ne \sigma_2^2$, since  $s_1^2 \ne s_2^2$, we can **not** assume that $\sigma_1^2 = \sigma_2^2$
 2. How do we calculate confidence interval of `2 sample t test`?
+3. Standard Normal Distribution VS. T-Distribution  for sample size larger than 30?
