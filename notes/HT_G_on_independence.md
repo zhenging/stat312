@@ -147,3 +147,6 @@ $\therefore$ **Reject** $H_0$ in favor of $H_A$.
 
 #### State conclusion in context
 This data **provides strong evidence** that smoking status (non-smoker, moderate, heavy) is **not** independent of having hypertension or not.
+
+#### Questions
+1. $\Chi_0^2$ and $\chi_0^2$
