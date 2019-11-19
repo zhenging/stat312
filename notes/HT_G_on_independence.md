@@ -63,10 +63,11 @@ Expected Counts:
 | Hypertension   | $\frac{87 * 69}{180}=33.350$ | $\frac{87 * 62}{180}=29.967$ |  $\frac{87 * 49}{180} = 23.683$ |
 | No Hypertension | $\frac{93 * 69}{180}=35.650$ | $\frac{93 * 62}{180}=32.033$ | $\frac{93 * 49}{180}=25.317$ |
 
-|   | Non-smokers | Moderate Smokers | Heavy Smokers |
-|---|-------------|------------------|---------------|
-| Hypertension    | 21 | 36 | 30 |
-| No Hypertension | 48 | 26 | 19 |
+|   | Non-smokers | Moderate Smokers | Heavy Smokers | Totals |
+|---|-------------|------------------|---------------|--------|
+| Hypertension    | 21 | 36 | 30 | 87 |
+| No Hypertension | 48 | 26 | 19 | 93 |
+| Totals          | 69 | 62 | 49 | 180 |
 
 Test Statistic is $\Chi^2$ (chi-squared)
 
@@ -75,7 +76,7 @@ $$
 \Chi_0^2 &\text{\textasciitilde} \Chi_v^2\\
 v &= (\text{No. of rows} - 1)* (\text{No. of columns} - 1)\\
 &= 1 * 2 = 2\\
-\Chi_0^2  &= \Sigma_i \Sigma_j \frac{(O{ij-E_{ij}})^2}{E_{ij}}\\
+\chi_0^2  &= \Sigma_i \Sigma_j \frac{(O{ij-E_{ij}})^2}{E_{ij}}\\
 &= \frac{(21 - 33.350)^2}{33.350} + \frac{(36 - 29.967)^2}{29.967} + \frac{(30 - 23.683)^2}{23.683}\\
 &+ \frac{(48 - 35.650)^2}{35.650} + \frac{(26 - 32.033)^2}{32.033} + \frac{(19 - 25.316)^2}{25.316}\\
 &\approx 14.4634
@@ -89,7 +90,8 @@ $$
 $$
 \begin{aligned}
 \text{p-value} &= P\{\text{get our value or more extreme } \space | \space H_0 \text{ is true}\}\\
-&= P(\Chi_0^2 > 14.4634 \space | \space H_0 \text{ is true})\\
+&= P(\Chi_0^2 > \chi_0^2 \space | \space H_0 \text{ is true})\\
+&= \Chi^2\text{cdf}(\color{magenta}\text{Lower bound}, \color{magenta}\text{ Upper bound}, \color{magenta}\text{ Degree of freedom})\\
 &= \Chi^2\text{cdf}(14.4634, 999, 2)\\
 &\approx 0.0007233
 \end{aligned}
@@ -134,7 +136,7 @@ X-squared = 14.464, df = 2, p-value = 0.0007232
 
 ##### Using ISCAM function
 ```
-iscamchisqprob(xval = Xsq$statistic, df = 3)
+iscamchisqprob(xval = Xsq$statistic, df = 2)
 
 **********************************Output***************************************
 probability: 0.0007232
@@ -147,6 +149,3 @@ $\therefore$ **Reject** $H_0$ in favor of $H_A$.
 
 #### State conclusion in context
 This data **provides strong evidence** that smoking status (non-smoker, moderate, heavy) is **not** independent of having hypertension or not.
-
-#### Questions
-1. $\Chi_0^2$ and $\chi_0^2$

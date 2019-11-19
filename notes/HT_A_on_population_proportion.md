@@ -1,7 +1,5 @@
 ## Hypothesis Test on Population Proportion ($\pi$)
 
-> Credit: Dr. A
-
 ### Example A
 Registered voter in Phoenix. `327` out of `500` support use of oxygenated fuel year-around to reduce air pollution. Do more than `60%` of registered voters in Phoenix support it?
 
@@ -43,7 +41,8 @@ $$
 \text{p-value} &= P\{\text{get our value or more extreme } \space | \space H_0 \text{ is true}\}\\
 &= P(C \ge 327 \space | \space H_0 \text{ is true})\\
 &= 1 - P(C < 326) \text{ one less than observed because of RV}\\
-&= 1 - \text{binomcdf}(500, 0.6, 326) \qquad \text{(Ti 83)}\\
+&= 1 - \text{binomcdf}(\color{magenta}\text{trail}, \color{magenta}\text{success probability}, \color{magenta}\text{success count})\\
+&= 1 - \text{binomcdf}(500, 0.6, 326)\\
 &= 1 - 0.99258\\
 &= 0.00742
 \end{aligned}

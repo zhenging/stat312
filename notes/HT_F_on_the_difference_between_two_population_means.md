@@ -1,7 +1,5 @@
 ## Hypothesis Test on the Difference between Twp Population Means
 
-> Credit: Dr. A
-
 ### Example F
 A paper in Quality Engineering [2013, v25(1)] presented data on cycles to failure of solder joints at different temperatures for printed circuit boards. Failure data for two temperatures for a copper-nickel-gold printed circuit board is summarized.
 $20^{\degree} C: \bar{x_1} = 422.2; \space s_1 = 172.23; \space n_1 = 10$
@@ -136,7 +134,3 @@ $\therefore$ **Fail** to reject $H_0$.
 
 #### State conclusion in context
 This data **does not** provide evidence that the mean number of cycles until failures is different for solder joints made at $20^{\degree}$ C versus $60^{\degree}$ C.
-
-#### Questions
-1. $P\{t_{17} < -46.5\ | \mu_1 - \mu_2 = 0\}$, why not $P\{T_{17} < t^*\ | \mu_1 - \mu_2 = 0\}$
-2. `iscamtwosamplet` and `tsum.test` produce the sample confidence interval.

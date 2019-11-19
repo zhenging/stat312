@@ -1,7 +1,5 @@
 ## Hypothesis Test on the Difference between Twp Population Means
 
-> Credit: Dr. A
-
 ### Example E
 Two suppliers maufacture a plastic gear used in a laser printer, the impact strength of those gears measured in foot-pounds is an important characteristic. A random sample of 10 gears from suppliers 1 result in $\bar{x_1} = 290$ and $s_1 = 12$; which another random sample of 16 gears from the second supplier result in $\bar{x_2} = 321$ and $s_2 = 22$. Does the data support the claim that the mean impact strength of gears from supplier 2 is at least 20 foot-pounds higher than that of supplier 1? Use $\alpha = 0.01$
 
@@ -56,7 +54,7 @@ $$
 &\bar{x_2} = 321; \space s_1 = 22; \space n_2 = 16\\
 &\Delta_0 = -20\\
 T_0 &= \frac{(\bar{X_1} - \bar{X_2}) - \Delta_0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \text{ and } T_0 \text{\textasciitilde} t_v\\
-t^* &= \frac{(290 - 321) - (-20)}{\sqrt{\frac{12^2}{10} + \frac{22^2}{16}}}\\
+t_0 &= \frac{(290 - 321) - (-20)}{\sqrt{\frac{12^2}{10} + \frac{22^2}{16}}}\\
 &= -1.6462\\
 v &= \bigg\lfloor \frac{(r_1^2 + r_2^2)}{\frac{r_1^2}{n_1 - 1} + \frac{r_2^2}{n_2 - 1}} \bigg\rfloor, \space r_j = \frac{s_j^2}{n_j}, \space j\in \{1, 2\} \qquad \color{magenta}{\text{(The ugly formula)}}\\
 \implies &v = \lfloor 23.721 \rfloor = 23 \qquad \text{Floor function: round to integer}\\
@@ -71,14 +69,12 @@ Be careful calculating $v$. It should be close to $n_1 + n_2$.
 ![Two sample t test](/assets/two_sample_t_test_left_tail.png)
 
 #### Calculate `p-value`
-> [Ti 83 tips](//todo)
-
 $$
 \begin{aligned}
 \text{p-value} &= P\{\text{get what we got or somthing more extreme} \space | \space H_0 \text{ is true}\}\\
-&= P\{T_0 < t^*\ \space | \space T_0 \text{\textasciitilde} t_{23} \text{ and } \mu_1 - \mu_2 = -20\} \\
-&= \text{tcdf}(\text{Lower bound}, \text{Upper bound}, \text{Degree of freedom}) \qquad \text{(Ti 83)}\\
-&= \text{tcdf}(-99, -1.6462, 23) \qquad \text{(Ti 83)}\\
+&= P\{T_{0} < t_0\ \space | \space T_{0} \text{\textasciitilde} t_{23} \text{ and } \mu_1 - \mu_2 = -20\} \\
+&= \text{tcdf}(\color{magenta}\text{Lower bound}, \color{magenta}\text{ Upper bound}, \color{magenta}\text{ Degree of freedom})\\
+&= \text{tcdf}(-99, -1.6462, 23)\\
 &= 0.05666
 \end{aligned}
 $$
@@ -139,5 +135,3 @@ This data **does not** support the claim that the mean impact strength of gear f
 
 #### Questions
 1. Why $\sigma_1^2 \ne \sigma_2^2$, since  $s_1^2 \ne s_2^2$, we can **not** assume that $\sigma_1^2 = \sigma_2^2$
-2. How do we calculate confidence interval of `2 sample t test`?
-3. Standard Normal Distribution VS. T-Distribution  for sample size larger than 30?

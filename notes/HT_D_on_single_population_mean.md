@@ -1,7 +1,5 @@
 ## Hypothesis Test on Population Mean (Single Population)
 
-> Credit: Dr. A
-
 ### Example D
 A company which makes vacuum cleaners has designed a new model. There is some concern that the new model has some issues in the energy it needs. Historically, vacuum cleaners expend `46` kw hours. The company tests `12` vacuum cleaners to calculate the annual kilowatt usage. The sample average was `42` kw and a sample standard deviation of `5.7` kw.
 
@@ -58,8 +56,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{1}{2}\text{(p-value)} &= P\{T_{11} < t_0 \space | \space H_0 \text{ is true}\}\\
-&= \text{tcdf}(\underbrace{-99}_{\text{lower bound}}, \overbrace{-2.4309}^{\text{upper bound}}, \underbrace{11}_{\text{degree of freedom}}) \qquad \text{(Ti 83)}\\
+\frac{1}{2}\text{(p-value)} &= P\{T_{0} < t_0 \space | \space H_0 \text{ is true}\}\\
+&= \text{tcdf}(\color{magenta}\text{Lower bound}, \color{magenta}\text{ Upper bound}, \color{magenta}\text{ Degree of freedom})\\
 &= 0.016678\\
 \text{p-value} &= 2 * 0.016678 = 0.03336
 \end{aligned}

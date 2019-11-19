@@ -1,7 +1,5 @@
 ## Hypothesis Test on Population Proportion ($\pi$)
 
-> Credit: Dr. A
-
 ### Example B
 Semiconductor manufacturer produces controllers used in automobile engine applications. A customer requires that the fraction of defective controllers not exceed `0.03` and that the manufacturer demonstrates process capability at this level of quality using $\alpha = 0.05$. The semiconductor manufacturer takes a random sample of `200` devices and finds via testing that `4` of them are defective. Can the manufacturer demonstrate process capability for the customer?
 

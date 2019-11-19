@@ -1,7 +1,5 @@
 ## Hypothesis Test on Population Mean (Single Population)
 
-> Credit: Dr. A
-
 ### Example C
 Self-report data of height for a set of college students were analyzed. Summary statistics:
 sample mean: $\bar{x} = 65.1622$
@@ -119,5 +117,4 @@ This data **does not** provide any evidence that the population mean height of c
 
 #### Questions
 1. Why does $\sigma^2 \approx s^2$ matter?
-2. Notation: $T_0, t_0, t^*, t_{n-1}$, $\mu, \mu_0$, `t-statistic`, `t-score`, `t critical value`
-3. Discrepancy between `iscamonesamplet` and `tsum.test` in confidence interval. `iscamonesamplet` and Ti 83+ have the same result.
+2. Discrepancy between `iscamonesamplet` and `tsum.test` in confidence interval. `iscamonesamplet` and Ti 83+ have the same result.

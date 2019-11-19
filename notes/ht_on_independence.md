@@ -2,17 +2,26 @@
 
 + We have two variable and we want to test whether they are independent or not.
 + $H_0$: Variable A **is** independent of variable B.
-+ $H_A$: Variable A **is NOT **independent of variable B.
++ $H_A$: Variable A **is NOT** independent of variable B.
 + Independence is commutative, os it does not matter which one is listed first.
 
 #### HT on Independence for 2 Categorical Vars
 1. Construct a contingency table of observed values
 2. Calculate $O{ij}$ and $E{ij}$ for all cells
-  - $O{ij}$ = observed count in cell `(i, j)`
-  - $E{ij}$ = expected count in cell `(i, j)`
   - Assuming $H_0$ is true, the variables are inpdependent
-  - $E{ij} = \hat p_i * \hat p_j * n = \frac{\text{(count in row i) * \text{(count in column j)}}}{n}$
-  - Large difference between $O{ij}$ and $E{ij}$ given evidence to reject $H_0$.
+  - Large difference between $O{ij}$ and $E{ij}$ given evidence to reject $H_0$.\
+
+$$
+\begin{aligned}
+O{ij} &= \text{observed count in cell } (i, j)\\
+E{ij} &= \text{expected count in cell } (i, j)\\
+&= n * \hat p_i * \hat p_j \\
+&= n* \frac{\text{(count in row i) }}{n} * \frac{\text{(count in column j)}}{n}\\
+&= \frac{\text{(count in row i) * \text{(count in column j)}}}{n}
+\end{aligned}
+$$
+
+
 
 #### $\chi_k^2$ Chi-squared Random Variable
 
