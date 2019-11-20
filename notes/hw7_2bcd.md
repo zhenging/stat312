@@ -1,8 +1,8 @@
-#### b. Second scenario - unknown population standard deviation
+#### 2b. Second scenario - unknown population standard deviation
 In this second scenario, we are not willing to assume that we know the exact value of the population standard deviation. Therefore, we must use the `t critical value` instead of $z^*$. The critical value is dependent on the sample size through the degrees of freedom. Let’s now repeat the parts above under this different scenario.
 
 **i)** Last year, the engineer had a data set with $n = 9$ and $\bar x = 4.06$, with $s = 0.08$. What was the `95%` confidence interval that they calculated? Show your derivation in detail, carrying as many significant figures as you can.
->Solution
+>**Solution**
 **First** calculate t-score (`t critical value`) $t^*$. Given confidence interval of 95%, CL = Confidence Level = 0.95, degree of freedom = sample size - 1 = 8
 $$
 \begin{aligned}
@@ -27,7 +27,7 @@ $$
 $$
 
 **ii)** Use your calculator to compute the same CI (on a TI-84: `STAT -> TESTS -> TInterval`). Write down your calculator model, your buttons to get to the CI input screen, all of your input values and what they represent, and the final confidence interval.
->Solution
+>**Solution**
 With a Ti 83+ calculator
 1\. Press `STAT` button, then select `TESTS`,
 2\. Then scroll down to `TInterval`, hit `ENTER`
@@ -37,7 +37,7 @@ With a Ti 83+ calculator
 6\. We have the result of `(3.9985, 4.1215)`.
 
 **iii)** What is the width of the CI that you calculated? (please show how you derive it and report your answer to the `4th` decimal place)
->Solution
+>**Solution**
 We have the resulting CI from `part ii`, which is `(3.9985, 4.1215)`, the width of the CI is
 $$
 \begin{aligned}
@@ -48,7 +48,7 @@ $$
 $$
 
 **iv)** Suppose that the engineer wants to have a smaller width this year when they compute the CI. Write down a formula to express the width of the CI and then explain how changing the sample size affects the width of the interval. Explain carefully – do not simply say something like “as the sample size increases the CI width increases”.
->Solution
+>**Solution**
 $$
 \begin{aligned}
 \text{Upper bound} &= \bar{x} + t^* (\frac{s}{\sqrt{n}})\\
@@ -58,7 +58,7 @@ $$
 &= 2 t^* (\frac{s}{\sqrt{n}})
 \end{aligned}
 $$
-With $t*, s$ being constant, as sample size `n` increases, the width of CI decreases; as sample size `n` decreases, the width of CI increases.
+The width of CI is a non-linear decreasing function of sample size `n`. (**Note**, as `n` increase, $t^*$ changes as well, but within a small margin, that can be ignored. Sample standard deviation `s` stays constant).
 
 **v)** Suppose that the target width for the `95%` CI this year is `0.06 mm`. What sample size is necessary to achieve that width, given the assumptions that the engineer is willing to make? List the assumptions explicitly. Use the **TEA** method: `T = try a value, E = evaluate the outcome, A = adjust the value` (repeat as necessary). Should your calculations along the way by constructing a table with columns:
 1\. Value for $n$;
@@ -66,7 +66,7 @@ With $t*, s$ being constant, as sample size `n` increases, the width of CI decre
 3\. achieved width,
 4\. comparison to target,
 5\. direction for adjustment; and with rows for each value that you try.
->Solution
+> **Solution**
 Using excel to run simulation, we have
 
 | n  | t-score | Achieved width | Comparison to target | Adjustment |
@@ -83,7 +83,7 @@ The sample size has to be `30` to achieve `95%` of CI with the width of `0.06` m
 By rounding `n` up to the nearest integer, the width of the Confidence Interval would be **slightly smaller** than desired value (assume this is what we want).
 
 **vi)** Calculate the necessary sample size for widths in the interval `0.04` to `0.08` (by `0.01` changes) and plot the sample size versus the width to see the trade-off between sample size and `95%` CI width.
->Solution
+> **Solution**
 Confidence Interval of 95%. Using the similar procedure (**TEA**) from `part v`, we have (Using excel to run the simulation)
 
 | Actual Width of CI | Approximate Value | Sample size  |
@@ -97,15 +97,21 @@ Confidence Interval of 95%. Using the similar procedure (**TEA**) from `part v`,
 
 #### c. Comparing these two scenarios by discussing:
 **i)** the effect on the required sample size, depending on whether you know the population standard deviation or whether you are estimating it
->Solution
+> **Solution**
 
+![Z Interval VS. T Interval](/assets/z_interval_t_interval.png)
+Let population standard deviation be $\sigma$.
+1\. With known $\sigma$, `standard normal distribution` $Z_{0, 1}$ is preferred to estimate sample size.
+2\. With uknown $\sigma$, we are using sample standard deviation to estimate $\sigma$, and `t-distribution` $t_{n-1}$ is preferred.
+3\. Approch using `standard normal distribution` will produce slightly smaller sample size than that using `t-distribution`, roughly `2` less. (`64-62`, `42-40`, `20-28` ..)
 
 **ii)** the desired width’s effect on the required sample size in both scenarios
->Solution
-In both scenarios, to pursure a smaller width of a fixed Confidence Interval, we need to increase the sample size.
+> **Solution**
+In both scenarios, to pursuare a smaller width of a fixed Confidence Interval, we need to increase the sample size in both scenario. The relationship is non linear.
 
 #### d. Solidify your understanding
 Writing two or more statements that Dr. A could use as fill-in-the-blank questions on the final exam. Underline the part(s) that should be the blank(s).
->Solution
+> **Solution**
 1\. To achieve a smaller width of a fixed Confidence Interval, we should ______ the sample size. (Answer: **increases**)
-2\.
+2\. For a known population standard deviation, ____ is preferred to determine the width of confidence interval. (Answer: **standard normal distribution**)
+3\. For an unknown population standard deviation, ____ is preferred to determine the width of confidence interval. (Answer: **t distribution**)
