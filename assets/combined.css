@@ -75,7 +75,7 @@ table {
 
 .markdown-body blockquote {
   padding: 1em 1em;
-  border: 0.5em solid #dfe2e5;
+  border-left: 0.4em solid #dfe2e5;
 }
 
 .markdown-body strong {
@@ -91,10 +91,19 @@ table {
   background-color: #fff;
 }
 
-/* .katex-display {
+.katex {
+  font: 1em;
+}
+
+.katex .mfrac .frac{
+  border-bottom: solid 0.04em;
+}
+
+.katex-display {
   text-align: left;
   margin-left: 1em;
-} */
+}
+
 
 @media print {
   html body {
