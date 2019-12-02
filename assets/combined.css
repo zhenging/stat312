@@ -95,13 +95,13 @@ table {
   font: 1em;
 }
 
-.katex .mfrac .frac{
+.katex .mfrac .frac-line{
   border-bottom: solid 0.04em;
 }
 
 .katex-display {
   text-align: left;
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 
