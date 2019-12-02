@@ -2,7 +2,7 @@
 1.  One parameter (v): degree of freedom
 2. Shape like Normal, but fatter tail
 3. Centered at 0
-4.  $ \text{VAR} = \begin{cases} \displaystyle\frac{v}{v-2} &\text{ if } v > 2\\  \infty &\text{ if } 1 < v \le 2 \\ \text{undefined} &\text{otherwise}\end{cases}$
+4. $\text{VAR} = \begin{cases} \displaystyle\frac{v}{v-2} &\text{ if } v > 2\\  \infty &\text{ if } 1 < v \le 2 \\ \text{undefined} &\text{otherwise}\end{cases}$
 5. As $v \to \infty$, $t_v \to \text{Normal}(0, 1)$
 
 If you draw a sample random sample of size n from a population that has an approximately normal distribution with mean $\mu$ and unknown popoluation standardf deviation $\sigma$ and calculate the t-score $t = \displaystyle \frac{\bar{x} - \mu}{(\frac{s}{\sqrt{n}})}$, then the t-scores follow a Student's t-distribution with $n-1$ degree of freedom. The t-scire has the same interpretation as the z-score, It measures how far $\bar{x}$ is from its mean $\mu$. For each sample size, there is a different Student's t-distribution.
@@ -24,4 +24,3 @@ Suppose you do a study of acupuncture to determine how effective it is in reliev
 `8.6; 9.4; 7.9; 6.8; 8.3; 7.3; 9.2; 9.6; 8.7; 11.4; 10.3; 5.4; 8.1; 5.5; 6.9`
 >Solution
 `(117.412, 137.488)`
-

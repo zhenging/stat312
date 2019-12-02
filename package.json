@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "course-x-build",
-    "deploy": "course-x-deploy",
+    "deploy": "course-x-build && course-x-deploy",
     "debug": "node --inspect-brk $(npm bin)/course-x-build"
   },
   "author": "zzheng07",
